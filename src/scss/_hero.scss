@@ -1,0 +1,73 @@
+
+.hero {
+  position: relative;
+  min-height: 700px;
+  background: url("../images/planta-construcao.jpg") no-repeat center;
+  background-size: cover;
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 158px;
+    content: "";
+    background: linear-gradient(to top, $white, transparent);
+  }
+}
+
+.hero-stripe-wraper {
+  position: absolute;
+  right: 0;
+  bottom: 110px;
+  left: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  filter: drop-shadow($box-shadow-sm);
+}
+
+.hero-stripe-left,
+.hero-stripe-right {
+  width: calc(100% - #{$spacer});
+  padding: 1.46rem;
+  font-size: 2rem;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  color: $white;
+  text-shadow: $box-shadow-sm;
+}
+
+.hero-stripe-left {
+  position: relative;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+  text-align: right;
+  background-color: $primary;
+  clip-path: polygon(0 0, 100% 0%, 94% 100%, 0% 100%);
+}
+
+.hero-stripe-right {
+  padding-left: 2rem;
+  margin-left: auto;
+  background-color: $success;
+  clip-path: polygon(4% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+@include media-breakpoint-up(md) {
+  .hero-stripe-left,
+  .hero-stripe-right {
+    width: 54%;
+    font-size: 2.6875rem;
+  }
+
+  .hero-stripe-left {
+    position: relative;
+    z-index: 1;
+    padding-right: 5rem;
+    margin-bottom: -45px;
+  }
+
+  .hero-stripe-right {
+    padding-left: 5rem;
+  }
+}

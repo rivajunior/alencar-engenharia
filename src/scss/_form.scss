@@ -1,0 +1,21 @@
+.form-header {
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-card {
+  background-color: $dark;
+  border: 0;
+
+  .card-body {
+    padding: 2.5rem;
+  }
+
+  .card-title {
+    padding-bottom: .8rem;
+    margin-bottom: 2rem;
+    font-weight: $font-weight-bold;
+    border-bottom: 2px solid $success;
+  }
+}

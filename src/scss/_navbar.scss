@@ -1,0 +1,28 @@
+.navbar {
+  position: relative;
+  z-index: $zindex-fixed;
+}
+
+.navbar-brand {
+  position: absolute;
+  top: 0;
+  box-shadow: $box-shadow-sm;
+
+  img {
+    $size: 100px;
+
+    width: $size;
+    height: $size;
+
+    @include media-breakpoint-up(md) {
+      $size: 234px;
+
+      width: $size;
+      height: $size;
+    }
+  }
+}
+
+.navbar-nav .nav-link {
+  font-weight: $font-weight-semibold;
+}

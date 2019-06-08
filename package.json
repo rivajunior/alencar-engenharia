@@ -1,0 +1,103 @@
+{
+  "name": "alencar-engenharia",
+  "version": "1.0.0",
+  "description": "Landing Page",
+  "main": "index.js",
+  "repository": "https://github.com/rivajunior/alencar-engenharia.git",
+  "author": "Riva Junior",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "watch": "parcel watch ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-bundle-visualiser": "^1.2.0",
+    "parcel-plugin-eslint": "^1.0.7",
+    "parcel-plugin-interpolate-html": "^1.0.0",
+    "parcel-plugin-ogimage": "^1.1.0",
+    "parcel-plugin-purgecss": "^2.1.2",
+    "parcel-plugin-static-files-copy": "^2.1.2",
+    "prettier": "^1.18.2",
+    "sass": "^1.21.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-twbs-bootstrap": "^0.3.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "swiper": "^4.5.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "endOfLine": "lf"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-twbs-bootstrap/scss"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "post-merge": "yarn install"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "eslint --fix",
+        "git add"
+      ],
+      "*.scss": [
+        "stylelint --fix",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "**/dist/"
+    ]
+  },
+  "staticFiles": {
+    "staticPath": "src/static",
+    "watcherGlob": "**"
+  },
+  "sass": {
+    "includePaths": [
+      "./node_modules"
+    ]
+  }
+}

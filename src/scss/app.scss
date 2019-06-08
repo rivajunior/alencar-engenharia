@@ -1,0 +1,224 @@
+@import "variables";
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/code";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group";
+// @import "bootstrap/scss/custom-forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+@import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/print";
+
+@import "swiper/src/swiper";
+
+// Typography
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+
+@import "hero";
+@import "navbar";
+@import "form";
+
+.first-section {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: -70px;
+    height: 170px;
+    content: "";
+    border: 2px solid $success;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: -55px;
+    height: 120%;
+    content: "";
+    border: 2px solid $dark;
+  }
+}
+
+.bg-couple {
+  position: relative;
+  background: $white url("../images/couple.jpg") no-repeat center;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(to right, $white 50%, transparent);
+  }
+
+  @include media-breakpoint-up(md) {
+    background-attachment: fixed;
+  }
+}
+
+.btn-warning {
+  min-width: 189px;
+  font-weight: $font-weight-bold;
+  color: $white;
+}
+
+.swiper-slide {
+  width: auto;
+}
+
+.mvv-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 104px;
+  margin-bottom: map-get($spacers, 4);
+}
+
+.third-section {
+  position: relative;
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
+
+  &::before {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    z-index: 1;
+    width: 26%;
+    content: "";
+    border: 2px solid $success;
+  }
+
+  .card {
+    font-size: $h5-font-size;
+    border: 0;
+    box-shadow: $box-shadow-sm;
+  }
+
+  .list-unstyled {
+    margin-bottom: 0;
+
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.br {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    content: "";
+    border: 2px solid $dark;
+  }
+}
+
+.bt-10 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
+  margin-bottom: map-get($spacers, 3);
+  font-weight: $font-weight-bold;
+  color: $white;
+  text-align: center;
+  background-color: $dark;
+
+  &::before {
+    position: absolute;
+    top: 10%;
+    right: -15px;
+    z-index: 1;
+    width: $bt-10-width;
+    content: "";
+    border: 2px solid $primary;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .bt-10 {
+    margin-bottom: 0;
+
+    &::before {
+      right: -#{$bt-10-width / 2 + $spacer};
+    }
+  }
+  .br {
+    &::after {
+      right: -15px;
+    }
+  }
+}
+
+.btn-whatsapp {
+  $size: 72px;
+
+  position: fixed;
+  right: $spacer;
+  bottom: $spacer;
+  z-index: $zindex-fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+  padding: .75rem;
+  background-color: #4cd200;
+  border-radius: 50%;
+  box-shadow: $box-shadow-sm;
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: $box-shadow;
+  }
+}
+
+.logo-footer {
+  $size: 116px;
+
+  width: $size;
+  height: $size;
+  margin-bottom: map-get($spacers, 4);
+  border-radius: 50%;
+}

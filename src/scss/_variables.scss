@@ -1,0 +1,29 @@
+// Colors
+$black: #000 !default;
+$white: #fff !default;
+$orange: #ec9613 !default;
+$green: #59af19 !default;
+$dark-green: #165c08 !default;
+$primary: $dark-green !default;
+$warning: $orange !default;
+$dark: $black !default;
+
+$navbar-dark-color: $white !default;
+$navbar-brand-padding-y: 0 !default;
+
+// stylelint-disable-next-line value-keyword-case
+$font-family-sans-serif: montserrat, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-weight-semibold: 600 !default;
+
+$box-shadow-sm: 0 3px 6px rgba($black, .16) !default;
+
+$form-group-margin-bottom: 1.875rem !default;
+
+$btn-border-radius: 2rem !default;
+// $btn-padding-x: 2rem !default;
+
+$h1-font-size: 2.8rem !default;
+
+$card-border-radius: 0 !default;
+
+$bt-10-width: 9.375rem !default;
