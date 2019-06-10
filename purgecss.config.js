@@ -5,7 +5,9 @@ module.exports = {
     /^modal-backdrop$/,
     /^modal-open$/,
     /^show$/,
-    /^collapsing$/
+    /^collapsing$/,
+    /spinner-border/,
+    /float-right/
   ],
   whitelistPatternsChildren: [/tooltip/, /was-validated/]
 }
