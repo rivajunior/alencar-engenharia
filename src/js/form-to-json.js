@@ -1,9 +1,9 @@
 /**
- * Checks that an element has a non-empty `name` and `value` property.
+ * Checks that an element has a non-empty `name` property.
  * @param  {HTMLElement} element the element to check
  * @return {Boolean} true if the element is an input, false if not
  */
-const isValidElement = element => element.name && element.value
+const isValidElement = element => element.name
 
 /**
  * Checks if an element’s value can be saved (e.g. not an unselected checkbox).
