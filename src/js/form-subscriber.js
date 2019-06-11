@@ -114,7 +114,7 @@ function startLoading(form) {
   const spinner = document.createElement('span')
   const spinnerText = document.createElement('span')
 
-  spinner.className = 'spinner-border float-right'
+  spinner.className = 'spinner-border spinner-border-sm float-right'
   spinner.setAttribute('role', 'status')
 
   spinnerText.className = 'sr-only'
@@ -172,9 +172,9 @@ function finishLoading(form) {
 /**
  *
  * @param {Object} cbHandlers Callback Handlers
- * @param {Object} cbHandlers.success The callback that handles the success response.
- * @param {Object} cbHandlers.error The callback that handles the error response.
- * @param {Object} cbHandlers.always The callback that always is called.
+ * @param {requestSuccessCallback} cbHandlers.success The callback that handles the success response.
+ * @param {requestErrorCallback} cbHandlers.error The callback that handles the error response.
+ * @param {requestAlwaysCallback} cbHandlers.always The callback that always is called.
  */
 function formHandler(cbHandlers) {
   return event => {

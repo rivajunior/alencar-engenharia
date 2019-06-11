@@ -21,4 +21,28 @@ new Swiper($('.swiper-container')[0], {
   }
 })
 
-$('form').submit(formSubscriber({}))
+$('form').submit(
+  formSubscriber({
+    success(response, form, data) {
+      const modal = $('#modal-contact-response').modal('show')
+
+      form.reset()
+      form.classList.remove('was-validated')
+
+      modal.find('.modal-title').text('Recebemos seus dados')
+
+      modal.find('#modal-contact-response-text').text(response.message)
+    },
+
+    error(response, form) {
+      const modal = $('#modal-contact-response').modal('show')
+
+      modal
+        .find('.modal-title')
+        .text('Ocorreu um erro')
+        .addClass('text-danger')
+
+      modal.find('#modal-contact-response-text').text(response.message)
+    }
+  })
+)
