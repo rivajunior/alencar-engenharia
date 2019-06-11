@@ -5,8 +5,8 @@ include('./MailChimp.php');
 use \DrewM\MailChimp\MailChimp;
 
 // MailChimp API credentials
-$api_key = 'a3a29a72565e38cb700a588e921752dd-us20';
-$list_id = '007a483bd5';
+$api_key = 'd89063433b9cfdda27830cd21aaec8b7-us20';
+$list_id = 'b1d6354484';
 
 $MailChimp = new MailChimp($api_key);
 

@@ -44,8 +44,10 @@
     "popper.js": "^1.15.0",
     "swiper": "^4.5.0"
   },
-  "engines": {
-    "node": ">=8.0.0"
+  "sass": {
+    "includePaths": [
+      "./node_modules"
+    ]
   },
   "browserslist": {
     "production": [
@@ -58,6 +60,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
   },
   "prettier": {
     "semi": false,
@@ -94,10 +99,5 @@
   "staticFiles": {
     "staticPath": "src/static",
     "watcherGlob": "**"
-  },
-  "sass": {
-    "includePaths": [
-      "./node_modules"
-    ]
   }
 }
